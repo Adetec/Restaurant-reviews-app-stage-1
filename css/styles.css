@@ -184,6 +184,10 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+#restaurants-list li a:hover {
+  background-color: orange;
+}
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
