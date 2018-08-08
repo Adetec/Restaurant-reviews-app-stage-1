@@ -239,9 +239,8 @@ nav h1 a {
   text-transform: uppercase;
 	width: 100%;
 }
-#restaurant-container, #map-container{
+#restaurant-container, .map-container{
   width: 48%;
-  margin: 130px 0 0;
   padding: 0 1%;
 }
 
@@ -255,6 +254,9 @@ nav h1 a {
   background-color: white;
 }
 
+.margin {
+  margin: 130px 0 0;
+}
 
 #reviews-container {
   padding: 30px 40px 80px;
@@ -329,4 +331,15 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
   font-size: 1.5em;
+}
+
+/* TODO: Set media query to max width 450px (NEXUS5) */
+@media screen and (max-width: 450px) {
+  nav {
+    height: auto;
+  }
+  nav h1 a {
+    font-size: 1em;
+    letter-spacing: 5px;
+  }
 }
