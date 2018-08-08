@@ -58,11 +58,11 @@ nav {
 }
 nav h1 {
   margin: auto;
+  padding: 10px;
 }
 nav h1 a {
   color: #fff;
-  font-size: 26pt;
-  font-weight: bolder;
+  font-size: 2em;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
