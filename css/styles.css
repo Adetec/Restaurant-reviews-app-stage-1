@@ -288,21 +288,34 @@ nav h1 a {
 .panel{
   background-color: #252831;
   display: flex;
-    border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .panel p {
   width: 50%;
   padding: 10px;
   margin: auto;
+  font-size: 1.5em;
 }
 .panel p:first-child {
   color: white;
   font-weight: bold;
-  font-size: 1.5em;
 }
 .panel p:last-child {
   color: #aaa;
+  font-size: 1em;
   text-align: right;
+}
+
+.orange {
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  width: 100px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 1.5em;
+    
 }
 
 .panel p:last-child, #reviews-list li p:last-child {
