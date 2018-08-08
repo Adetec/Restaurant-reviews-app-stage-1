@@ -255,6 +255,7 @@ nav h1 a {
   background-color: white;
 }
 
+
 #reviews-container {
   padding: 30px 40px 80px;
   width: 90%;
@@ -283,7 +284,9 @@ nav h1 a {
   width: 85%;
 }
 
-
+#reviews-list li p {
+  font-size: 1.5em;
+}
 
 .panel{
   background-color: #252831;
@@ -294,7 +297,6 @@ nav h1 a {
   width: 50%;
   padding: 10px;
   margin: auto;
-  font-size: 1.5em;
 }
 .panel p:first-child {
   color: white;
@@ -306,6 +308,10 @@ nav h1 a {
   text-align: right;
 }
 
+#reviews-list li p:last-child {
+  color: #666;
+}
+
 .orange {
   color: white;
   background-color: orange;
@@ -314,8 +320,6 @@ nav h1 a {
   text-transform: uppercase;
   margin-left: 10px;
   padding: 10px;
-  font-size: 1.5em;
-    
 }
 
 .panel p:last-child, #reviews-list li p:last-child {
@@ -324,4 +328,5 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+  font-size: 1.5em;
 }
