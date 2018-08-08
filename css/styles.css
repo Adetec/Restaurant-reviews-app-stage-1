@@ -188,7 +188,7 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 1001;
@@ -206,8 +206,7 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 100%;
+  position: relative;
 }
 #restaurant-name {
   color: #f18200;
@@ -333,13 +332,47 @@ nav h1 a {
   font-size: 1.5em;
 }
 
-/* TODO: Set media query to max width 450px (NEXUS5) */
+/* TODO: Set media query to max width 450px */
 @media screen and (max-width: 450px) {
   nav {
     height: auto;
   }
+
   nav h1 a {
     font-size: 1em;
     letter-spacing: 5px;
   }
+
+  .filter-options {
+    height: 130px;
+  }
+
+  #restaurants-list {
+    padding: 30px 0 60px;
+  }
+
+  #restaurants-list li {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  /* Styles for restaurant.html */
+
+  #restaurant-container, .map-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  #reviews-container {
+    padding: 0;
+  }
+
+  #restaurant-hours td, #reviews-list li p {
+    font-size: 1.2em; 
+  }
+  
 }
