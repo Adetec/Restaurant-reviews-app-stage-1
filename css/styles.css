@@ -237,7 +237,7 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-container, #map-container{
   width: 48%;
@@ -258,7 +258,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
   width: 100%;
-  padding: 140px 40px 30px;
+  /* remove dupplicated padding */
 }
 #reviews-container h2 {
   color: #f58500;
