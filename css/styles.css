@@ -373,5 +373,9 @@ nav h1 a {
   #restaurant-hours td, #reviews-list li p {
     font-size: 1.2em; 
   }
+
+  .margin {
+    margin: 0;
+  }
   
 }
