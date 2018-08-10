@@ -187,7 +187,7 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1001;
@@ -372,10 +372,6 @@ nav h1 a {
 
   #restaurant-hours td, #reviews-list li p {
     font-size: 1.2em; 
-  }
-
-  .margin {
-    margin: 0;
   }
   
 }
