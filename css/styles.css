@@ -379,3 +379,13 @@ nav h1 a {
   }
   
 }
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  nav h1 {
+    padding: 25px;
+  }
+  nav h1 a {
+    font-size: 1em;
+    letter-spacing: 5px;
+  }
+}
