@@ -126,6 +126,9 @@ nav h1 a {
   padding: 0 10px;
   width: 200px;
 }
+.filter-options label {
+  display: none;
+}
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
