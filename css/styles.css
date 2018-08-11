@@ -134,7 +134,6 @@ nav h1 a {
 #restaurants-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
