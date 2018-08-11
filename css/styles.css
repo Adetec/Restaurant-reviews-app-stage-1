@@ -127,7 +127,8 @@ nav h1 a {
   width: 200px;
 }
 .filter-options label {
-  display: none;
+  position: absolute;
+  top: -100px;
 }
 
 /* ====================== Restaurant Listing ====================== */
