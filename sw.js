@@ -2,13 +2,9 @@ let versionOfCache = "restaurants-v1";
 
 self.addEventListener('fetch' , event => {
     event.respondWith(
-        fetch(event.request).then(response => {
-            if (response.status == 404) {
-                return new Response("Oops... Not found!");
-            }
-            return response;
-        }).catch((e) => {
-            return new Response("Oops... Failed!", e);
+        caches.match(event.request).then(response => {
+            if (response) return response;
+            return fetch(event.request);
         })
     );
 });
