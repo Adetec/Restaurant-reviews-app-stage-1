@@ -162,13 +162,12 @@ createRestaurantHTML = (restaurant) => {
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.setAttribute('alt',restaurant.name);// create Attribute alt
-  image.setAttribute("aria-label", `${restaurant.name}`);
   li.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   
-  name.setAttribute("aria-label", `${restaurant.name}`);
+  name.setAttribute("aria-label", `Title: ${restaurant.name}`);
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -176,6 +175,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(neighborhood);
 
   const address = document.createElement('p');
+  address.setAttribute('role')
   address.innerHTML = restaurant.address;
   li.append(address);
 
