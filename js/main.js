@@ -157,7 +157,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.setAttribute("role", "list");
+  li.setAttribute("role", "list");// create Role Attribute
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
@@ -167,7 +167,7 @@ createRestaurantHTML = (restaurant) => {
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   
-  name.setAttribute("aria-label", `Title: ${restaurant.name}`);
+  name.setAttribute("aria-label", `Title: ${restaurant.name}`);// create Aria label Attribute
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -181,6 +181,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  // create Role & Aria label Attribute
   more.setAttribute("role", "button");
   more.setAttribute("aria-label", `${restaurant.name}`);
   li.append(more)

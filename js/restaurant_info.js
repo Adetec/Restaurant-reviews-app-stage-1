@@ -84,7 +84,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
-  address.setAttribute('aria-roledescription','Adress');
+  address.setAttribute('aria-roledescription','Adress');// create Aria role description Attribute
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
