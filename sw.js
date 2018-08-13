@@ -16,14 +16,14 @@ const filesToCache = [
     './js/dbhelper.js',
     './js/main.js',
     './js/restaurant_info.js',
-    './js/sw-register.js',
+    './sw-register.js',
     './data/restaurants.json'
 ];
 
 let versionOfCache = "restaurants-v1";
 
 self.addEventListener('fetch' , event => {
-
+console.log(event.request)
 });
 
 self.addEventListener('install' , event => {
