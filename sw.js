@@ -40,5 +40,18 @@ self.addEventListener('install' , event => {
 });
 
 self.addEventListener('activate' , event => {
+    event.waitUntil(
+        caches.keys().then(cacheStored => {
+            return Promise.all(
+             cacheStored.map(cacheStored => {
+                 if (versionOfCache != cacheStored) {
+                    return caches.delete(cacheStored);
+                 }
+             })   
+            )
+        }
+
+        )
+    );
 
 });
