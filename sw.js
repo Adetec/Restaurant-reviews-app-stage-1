@@ -23,7 +23,9 @@ const filesToCache = [
 let versionOfCache = "restaurants-v1";
 
 self.addEventListener('fetch' , event => {
-console.log(event.request)
+    event.respondWith(
+        new Response('Hello Adel!')
+    );
 });
 
 self.addEventListener('install' , event => {
