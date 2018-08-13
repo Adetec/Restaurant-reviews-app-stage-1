@@ -175,7 +175,6 @@ createRestaurantHTML = (restaurant) => {
   li.append(neighborhood);
 
   const address = document.createElement('p');
-  address.setAttribute('role')
   address.innerHTML = restaurant.address;
   li.append(address);
 
