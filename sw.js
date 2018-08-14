@@ -31,7 +31,7 @@ self.addEventListener('install' , event => { // Install cache files
                     './img/8.jpg',
                     './img/9.jpg',
                     './img/10.jpg'
-                ]                
+                ]
             );
             return cache.addAll( // Add principal files to cache
                 [
