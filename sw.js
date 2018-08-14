@@ -4,20 +4,23 @@ self.addEventListener('fetch' , event => {
     event.respondWith(
         caches.match(event.request).then(response => {
             if (response) return response;
-            return fetch(event.request);
+            return response || fetch(event.request).then(fetchResponse =>
+                caches.open(versionOfCache).then(cache => { // Put file in cache next time
+                    cache.put(event.request, fetchResponse.clone());
+                    return fetchResponse;
+                })
+            ).catch(error => {  // Logging errors if ther's a problem
+                console.log('Oops! Files are not cached, network problem', error);
+            });
         })
     );
 });
 
-self.addEventListener('install' , event => {
+self.addEventListener('install' , event => { // Install cache files
     event.waitUntil(
         caches.open(versionOfCache).then(cache=> {
-            return cache.addAll(
+            cache.addAll(
                 [
-                    './',
-                    './index.html',
-                    './restaurant.html',
-                    './css/styles.css',
                     './img/1.jpg',
                     './img/2.jpg',
                     './img/3.jpg',
@@ -27,7 +30,15 @@ self.addEventListener('install' , event => {
                     './img/7.jpg',
                     './img/8.jpg',
                     './img/9.jpg',
-                    './img/10.jpg',
+                    './img/10.jpg'
+                ]                
+            );
+            return cache.addAll(
+                [
+                    './',
+                    './index.html',
+                    './restaurant.html',
+                    './css/styles.css',
                     './js/dbhelper.js',
                     './js/main.js',
                     './js/restaurant_info.js',
@@ -39,19 +50,18 @@ self.addEventListener('install' , event => {
     );
 });
 
-self.addEventListener('activate' , event => {
+self.addEventListener('activate' , event => { // Handle old cached version
     event.waitUntil(
         caches.keys().then(cacheStored => {
             return Promise.all(
-             cacheStored.map(cacheStored => {
-                 if (versionOfCache != cacheStored) {
-                    return caches.delete(cacheStored);
+             cacheStored.map(thisCache => {
+                 if (versionOfCache != thisCache) {
+                    return caches.delete(thisCache);
                  }
-             })   
+             })
             )
         }
 
         )
     );
-
 });
